@@ -2,27 +2,6 @@
 
 This document outlines how to enhance your Zsh prompt to dynamically display Git repository status using colors and icons. The Git status appears on the **right side of the terminal** using Zsh's `RPROMPT`.
 ---
-## **Example Output**
-
-### Clean Repository (<span style="color:green;">Green ✔</span>):
-```plaintext
-┌──(user@machine)-[~/projects/myproject]
-└─$                                                                                     main ✔
-```
-
-### Repository with Untracked/Unstaged Changes (<span style="color:red">Red ⚠</span>):
-```plaintext
-┌──(user@machine)-[~/projects/myproject]
-└─$                                                                                     main ⚠
-```
-
-### Repository with Staged Changes (<span style="color:yellow">Yellow ⚠</span>):
-```plaintext
-┌──(user@machine)-[~/projects/myproject]
-└─$                                                                                     main ⚠
-```
-
----
 
 ## **Git Status Function**
 
@@ -32,6 +11,11 @@ The following function dynamically checks the state of your Git repository and d
 - **Yellow ⚠**: Staged changes.
 - **Red ⚠**: Untracked or unstaged changes.
 
+## **Example Output**
+
+![demo](examples/demo.gif)
+
+---
 ### Add this **Function** at the top of the Prompt Configuration.
 ```zsh
 git_status() {
